@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>For_Code | Contact System</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <style>
+      :root {
+        --primary-glow: #a855f7;
+        --glass-bg: rgba(255, 255, 255, 0.07);
+        --border-color: rgba(255, 255, 255, 0.15);
+      }
+
+      body {
+        background: radial-gradient(circle at top right, #2d0b5a, #120524);
+        color: #fff;
+        font-family: "Inter", sans-serif;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+        margin: 0;
+      }
+
+      .form-container {
+        background: var(--glass-bg);
+        backdrop-filter: blur(20px);
+        -webkit-backdrop-filter: blur(20px);
+        border: 1px solid var(--border-color);
+        border-radius: 24px;
+        padding: 40px;
+        width: 100%;
+        max-width: 550px;
+        box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
+      }
+
+      h2 {
+        font-size: 28px;
+        margin-bottom: 8px;
+      }
+      p.subtitle {
+        color: #b1a7bd;
+        font-size: 14px;
+        margin-bottom: 30px;
+      }
+
+      .input-group {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 15px;
+        margin-bottom: 15px;
+      }
+
+      .field-wrapper {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 15px;
+      }
+
+      input,
+      textarea {
+        background: rgba(0, 0, 0, 0.2);
+        border: 1px solid var(--border-color);
+        border-radius: 12px;
+        padding: 14px;
+        color: #fff;
+        font-size: 15px;
+        transition: all 0.3s ease;
+      }
+
+      input:focus,
+      textarea:focus {
+        outline: none;
+        border-color: var(--primary-glow);
+        background: rgba(255, 255, 255, 0.1);
+        box-shadow: 0 0 15px rgba(168, 85, 247, 0.2);
+      }
+
+      input::placeholder,
+      textarea::placeholder {
+        color: rgba(255, 255, 255, 0.4);
+      }
+
+      textarea {
+        height: 120px;
+        resize: none;
+      }
+
+      .send-btn {
+        width: 100%;
+        padding: 16px;
+        margin-top: 10px;
+        border: none;
+        border-radius: 50px;
+        background: linear-gradient(90deg, #9333ea, #6366f1);
+        color: white;
+        font-weight: 700;
+        font-size: 16px;
+        cursor: pointer;
+        transition: 0.4s;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+      }
+
+      .send-btn:hover {
+        filter: brightness(1.2);
+        box-shadow: 0 10px 20px rgba(147, 51, 234, 0.3);
+        transform: translateY(-2px);
+      }
+
+      .social-footer {
+        margin-top: 30px;
+        border-top: 1px solid var(--border-color);
+        padding-top: 20px;
+      }
+
+      .icons {
+        display: flex;
+        gap: 15px;
+        margin-top: 10px;
+      }
+
+      .icons i {
+        font-size: 20px;
+        cursor: pointer;
+        opacity: 0.6;
+        transition: 0.3s;
+      }
+
+      .icons i:hover {
+        opacity: 1;
+        color: var(--primary-glow);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="form-container">
+      <h2>Envie-nos uma mensagem</h2>
+      <p class="subtitle">Preencha os dados para iniciarmos o contato.</p>
+
+      <form id="contactForm">
+        <div class="input-group">
+          <input type="text" id="name" placeholder="Nome" required />
+          <input type="email" id="email" placeholder="E-mail" required />
+        </div>
+
+        <div class="input-group">
+          <input type="tel" id="phone" placeholder="Telefone (DD) 00000-0000" />
+          <input type="text" id="company" placeholder="Empresa" />
+        </div>
+
+        <div class="field-wrapper">
+          <input type="text" id="subject" placeholder="Subject" required />
+        </div>
+
+        <div class="field-wrapper">
+          <textarea
+            id="message"
+            placeholder="Escreva sua mensagem aqui..."
+            required
+          ></textarea>
+        </div>
+
+        <button type="submit" class="send-btn">Enviar Mensagem</button>
+      </form>
+
+      <div class="social-footer">
+        <small style="color: #888">Siga nossas redes sociais</small>
+        <div class="icons">
+          <a href="https://www.instagram.com/forcodeufrj" target="_blank">
+            <i class="fa-brands fa-instagram"></i>
+          </a>
+          <a href="https://www.youtube.com/@for_code" target="_blank">
+            <i class="fa-brands fa-youtube"></i>
+          </a>
+          <a
+            href="https://www.linkedin.com/company/for-code/posts/?feedView=all"
+            target="_blank"
+          >
+            <i class="fa-brands fa-linkedin"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
