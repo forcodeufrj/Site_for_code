@@ -1,0 +1,100 @@
+:root {
+    --roxo-escuro:          #1E1647;
+    --roxo-claro:           #614AD3;
+    --amarelo-classico:     #FFFF00;
+    --branco:               #FFFFFF;
+    --gradiente-baixo:      #9A4A4D;
+    --gradiente-topo:       #161E47;
+    --gradiente-botao-1:    #A210C2;
+    --gradiente-botao-2:    #614AD3;
+    --gradiente-botao-3:    #9483E4;
+    --tamanho-subtitulo: 3rem;
+    --tamanho-titulo: 12.5rem;
+    --tamanho-texto: 1.5rem;
+    --tamanho-texto-botao: 1rem;
+}
+
+body{
+    background: linear-gradient(to bottom, var(--gradiente-topo), var(--gradiente-baixo));
+    min-height: 100vh;
+    max-width: 100%;
+}
+
+h1{
+    margin-bottom:0;
+}
+.titulo-about{
+    font-size: var(--tamanho-titulo);
+    color: var(--branco);
+    font-family: "Orelega One", serif;
+    font-weight: 1000;
+    font-style: normal;
+    opacity: 0.05;
+    margin-bottom:0;
+    margin-top: 0;
+    grid-row: 1;
+    grid-column: 2;
+    white-space: nowrap;
+}
+
+.subtitulo-about{
+    font-size: var(--tamanho-subtitulo);
+    color: var(--branco);
+    font-family: "Sora", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-style: normal;
+    margin-bottom: 1.3125rem;
+    margin-top: 0;
+}
+
+.texto-about{
+    font-size: var(--tamanho-texto);
+    color: var(--branco);
+    font-family: "Sora", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    flex: 1;
+    margin-bottom: 2.6875rem;
+    margin-top: 0;
+    grid-column: 2;
+}
+
+.imagem{
+    grid-column: 1;
+    grid-row: 2;
+    width: 100%;
+    height: auto;
+}
+
+.sobre{
+    display: grid;
+    grid-template-columns: 400px 1fr;
+    column-gap: 40px;
+    row-gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    margin-bottom: 1.5rem;
+}
+.texto-sobre{
+    grid-column: 2;
+    max-width: 80%;
+    margin-bottom: 1rem;
+}
+
+
+.botao-about{
+    margin-bottom: 0;
+    display:inline-block;
+    padding: 0.75rem 2rem;
+    border-radius: 3.125rem;
+    border: none;
+    cursor: pointer;
+    font-family: "Sora", sans-serif;
+    font-weight: 600;
+    font-size: var(--tamanho-texto-botao);
+    color: var(--branco);
+    text-decoration: none;
+    background: linear-gradient(to right, var(--gradiente-botao-1), var(--gradiente-botao-2) 65%, var(--gradiente-botao-3)); /*falta acertar proporção gradiente*/
+}
