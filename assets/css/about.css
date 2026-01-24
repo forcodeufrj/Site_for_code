@@ -34,7 +34,10 @@ h1{
     margin-top: 0;
     grid-row: 1;
     grid-column: 2;
-    white-space: nowrap;
+    display: block;
+    width: 100%;
+    word-wrap: break-word;
+    white-space: normal;
 }
 
 .subtitulo-about{
@@ -61,7 +64,7 @@ h1{
     grid-column: 2;
 }
 
-.imagem{
+/* .imagem{
     grid-column: 1;
     grid-row: 2;
     width: 100%;
@@ -81,8 +84,49 @@ h1{
     grid-column: 2;
     max-width: 80%;
     margin-bottom: 1rem;
+} */
+
+.sobre{
+    /* display: flex; */
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 20px;
+    max-width: 100%;
+    overflow-x: hidden;
 }
 
+.titulo-sobre{
+    display: block;
+    width: 100%;
+    margin-left: auto;
+    overflow-wrap: break-word;
+    
+}
+
+.content-sobre{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 10px;
+    
+}
+
+.texto-sobre{
+    flex: 2 1 400px;
+    min-width: 300px;
+    max-width: 100%;
+    
+}
+
+.imagem{
+    width: 100%;
+    max-width: 450px;
+    height: auto;
+    flex: 1 1 300px;
+}
 
 .botao-about{
     margin-bottom: 0;
