@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="assets/css/reset.css">
     <link rel="stylesheet" href="assets/css/footer.css">
+    <link rel="stylesheet" href="assets/diretoria/diretoria.css">
     <link rel="shortcut icon" href="assets/for_code.ico" type="logo da for_code">
     <title>For_Code | Contact System</title>
     <!-- falta isso aqui em baixo, ADICIONAR AS LOGOS DAS REDES SOCIAIS -->
@@ -40,7 +41,7 @@
         background: radial-gradient(circle at top right, #2d0b5a, #120524);
         color: #fff;
         font-family: "Inter", sans-serif;
-        display: flex;
+        /*display: flex;*//*quando essa linha esta ativa, o conteudo da pagina fica lado a lado*/
         justify-content: center;
         align-items: center;
         min-height: 100vh;
@@ -195,6 +196,55 @@
         </div>
     </div>
 
+    <main><!--Não sei exatamente onde começa a main--> 
+
+    <!--Diretorias-->
+        <section class="diretoria">
+            <div class="container">
+                <h1>Diretorias</h1>
+                <div class="diretoria-grid">
+
+                    <!--Diretoria1-->
+                    <div class="diretoria-card">
+                        <img src="assets/diretoria/diretor1.png" alt="Behael">
+                        <div class="diretoria-info">
+                            <h2 class="diretoria-diretor">Behael</h2>
+                            <p class="diretoria-nome">Diretoria de Marketing</p>
+                        </div>
+                    </div>   
+
+                    <!--Diretoria2-->
+                    <div class="diretoria-card">
+                        <img src="assets/diretoria/diretor2.png" alt="Behael">
+                        <div class="diretoria-info">
+                            <h2 class="diretoria-diretor">Behael</h2>
+                            <p class="diretoria-nome">Diretoria de Marketing</p>
+                        </div>
+                    </div>  
+
+                    <!--Diretoria3-->
+                    <div class="diretoria-card">
+                        <img src="assets/diretoria/diretor3.png" alt="Behael">
+                        <div class="diretoria-info">
+                            <h2 class="diretoria-diretor">Behael</h2>
+                            <p class="diretoria-nome">Diretoria de Marketing</p>
+                        </div>
+                    </div>  
+
+                    <!--Diretoria4-->
+                    <div class="diretoria-card">
+                        <img src="assets/diretoria/diretor4.png" alt="Behael">
+                        <div class="diretoria-info">
+                            <h2 class="diretoria-diretor">Behael</h2>
+                            <p class="diretoria-nome">Diretoria de Marketing</p>
+                        </div>
+                    </div>  
+                </div>
+            </div>
+        </section><!--Fim Diretoria-->
+    
+
+
     <div class="form-container">
       <h2>Envie-nos uma mensagem</h2>
       <p class="subtitle">Preencha os dados para iniciarmos o contato.</p>
@@ -224,6 +274,9 @@
 
         <button type="submit" class="send-btn">Enviar Mensagem</button>
       </form>
+
+    </main><!--Finda da main-->
+    
     <footer>
         <div id="footer_content">
             <div id="footer_contacts">
