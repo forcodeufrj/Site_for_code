@@ -1,374 +1,166 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="assets/css/reset.css">
-    <link rel="stylesheet" href="assets/css/footer.css">
-    <link rel="stylesheet" href="assets/diretoria/diretoria.css">
-    <link rel="shortcut icon" href="assets/for_code.ico" type="logo da for_code">
-    <title>For_Code | Contact System</title>
-    <!-- falta isso aqui em baixo, ADICIONAR AS LOGOS DAS REDES SOCIAIS -->
-    <link 
-    rel="stylesheet" 
-    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" 
-    integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" 
-    crossorigin="anonymous" 
-    referrerpolicy="no-referrer" />
-    <!-- falta isso aqui em cima, ADICIONAR AS LOGOS DAS REDES SOCIAIS -->
-      <nav class="navegacao">
-    <div class="logo">
-        <a href="index.html">
-            <img src="assets/logo_forcode.png" alt="Logo">
-        </a>
-    </div>
-    <ul class="nav-links">
-        <li><a href="#home">Home</a></li>
-        <li><a href="#about">Quem somos</a></li>
-        <li><a href="#conquistas">Conquistas</a></li>
-        <li><a href="#contact">Contato</a></li>
-    </ul>
-  </nav>
-  </head>
-<body>
+    <title>Statistics Section</title>
     <style>
-      :root {
-        --primary-glow: #a855f7;
-        --glass-bg: rgba(255, 255, 255, 0.07);
-        --border-color: rgba(255, 255, 255, 0.15);
-        }
+        /* Importando uma fonte moderna */
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
+
         body {
-        background: radial-gradient(circle at top right, #2d0b5a, #120524);
-        color: #fff;
-        font-family: "Inter", sans-serif;
-        /*display: flex;*//*quando essa linha esta ativa, o conteudo da pagina fica lado a lado*/
-        justify-content: center;
-        align-items: center;
-        min-height: 100vh;
-        margin: 0;
+            margin: 0;
+            padding: 0;
+            background-color: #0d0b1f; /* Fundo escuro profundo */
+            font-family: 'Inter', sans-serif;
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
         }
 
-      .form-container {
-        background: var(--glass-bg);
-        backdrop-filter: blur(20px);
-        -webkit-backdrop-filter: blur(20px);
-        border: 1px solid var(--border-color);
-        border-radius: 24px;
-        padding: 40px;
-        width: 100%;
-        max-width: 550px;
-        box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
+        .stats-section {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 60px;
+            padding: 40px;
+            max-width: 1100px;
+            width: 100%;
+            position: relative;
         }
 
-      h2 {
-        font-size: 28px;
-        margin-bottom: 8px;
-      }
-      p.subtitle {
-        color: #b1a7bd;
-        font-size: 14px;
-        margin-bottom: 30px;
-      }
+        /* Texto "Statistics" ao fundo */
+        .bg-text {
+            position: absolute;
+            top: 70px;
+            right: 80px;
+            font-size: 8rem;
+            font-weight: 900;
+            color: rgba(255, 255, 255, 0.03);
+            z-index: 0;
+            pointer-events: none;
+        }
 
-      .input-group {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        gap: 15px;
-        margin-bottom: 15px;
-      }
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 24px;
+            z-index: 1;
+        }
 
-      .field-wrapper {
-        display: flex;
-        flex-direction: column;
-        margin-bottom: 15px;
-      }
+        .stat-card {
+            background: rgba(255, 255, 255, 0.03);
+            backdrop-filter: blur(10px); /* Efeito de vidro */
+            border: 1.5px solid rgba(138, 43, 226, 0.3); /* Borda roxa translúcida */
+            border-radius: 24px;
+            padding: 40px 30px;
+            text-align: center;
+            width: 180px;
+            transition: all 0.3s ease;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+        }
 
-      input,
-      textarea {
-        background: rgba(0, 0, 0, 0.2);
-        border: 1px solid var(--border-color);
-        border-radius: 12px;
-        padding: 14px;
-        color: #fff;
-        font-size: 15px;
-        transition: all 0.3s ease;
-      }
+        .stat-card:hover {
+            transform: translateY(-10px);
+            border-color: #8a2be2;
+            background: rgba(138, 43, 226, 0.08);
+        }
 
-      input:focus,
-      textarea:focus {
-        outline: none;
-        border-color: var(--primary-glow);
-        background: rgba(255, 255, 255, 0.1);
-        box-shadow: 0 0 15px rgba(168, 85, 247, 0.2);
-      }
+        .icon {
+            font-size: 32px;
+            margin-bottom: 20px;
+            filter: drop-shadow(0 0 8px #8a2be2);
+            display: block;
+        }
 
-      input::placeholder,
-      textarea::placeholder {
-        color: rgba(255, 255, 255, 0.4);
-      }
+        .number {
+            font-size: 2.2rem;
+            font-weight: 800;
+            margin-bottom: 8px;
+            display: block;
+        }
 
-      textarea {
-        height: 120px;
-        resize: none;
-      }
+        .label {
+            font-size: 0.95rem;
+            font-weight: 500;
+            color: #b0b0b0;
+            margin: 0;
+        }
 
-      .send-btn {
-        width: 100%;
-        padding: 16px;
-        margin-top: 10px;
-        border: none;
-        border-radius: 50px;
-        background: linear-gradient(90deg, #9333ea, #6366f1);
-        color: white;
-        font-weight: 700;
-        font-size: 16px;
-        cursor: pointer;
-        transition: 0.4s;
-        text-transform: uppercase;
-        letter-spacing: 1px;
-      }
+        /* Lado direito: Visual/Imagem */
+        .visual-container {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            position: relative;
+            z-index: 1;
+        }
 
-      .send-btn:hover {
-        filter: brightness(1.2);
-        box-shadow: 0 10px 20px rgba(147, 51, 234, 0.3);
-        transform: translateY(-2px);
-      }
+        /* Placeholder para a imagem da direita */
+        .mockup-image {
+            max-width: 100%;
+            height: auto;
+            border-radius: 12px;
+            /* Filtro para combinar com a estética neon se a imagem for clara */
+            filter: drop-shadow(0 0 20px rgba(138, 43, 226, 0.2));
+            margin-top: 120px;
+            margin-left: auto;   /* Empurra a imagem o máximo possível para a direita */
+            margin-right: 60px;
+        }
 
-      .icons {
-        display: flex;
-        gap: 15px;
-        margin-top: 10px;
-      }
-
-      .icons i {
-        font-size: 20px;
-        cursor: pointer;
-        opacity: 0.6;
-        transition: 0.3s;
-      }
-
-      .icons i:hover {
-        opacity: 1;
-        color: var(--primary-glow);
-      }
+        /* Ajuste para telas menores */
+        @media (max-width: 900px) {
+            .stats-section {
+                flex-direction: column;
+                text-align: center;
+                padding-top: 100px;
+            }
+            .bg-text {
+                font-size: 4rem;
+                top: 50px;
+                left: 50%;
+                transform: translateX(-50%);
+            }
+        }
     </style>
-        <title>Valores - For Code</title>
-        <section class="valores-container">
-        <h2 class="titulo-sessao">Valores</h2>
+</head>
+<body>
 
-        <div class="cards-grid">
+    <div class="bg-text">Statistics</div>
 
-            <div class="card">
-                <div class="icon-box">
-                    <img src="img/ion_rocket-sharp.svg" alt="Ícone Simplicidade">
-                </div>
-                <h3>Simplicidade</h3>
-                <p>Feito é melhor que perfeito.</p>
+    <section class="stats-section">
+        <div class="stats-grid">
+            <div class="stat-card">
+                <span class="icon">🙋🏽‍♂️</span>
+                <span class="number">25+</span>
+                <p class="label">Membros Ativoss</p>
             </div>
 
-            <div class="card">
-                <div class="icon-box">
-                    <img src="img/octicon_sync-16.svg" alt="Ícone Comunicação">
-                </div>
-                <h3>Comunicação</h3>
-                <p>Ligar boas ideias e criar soluções.</p>
+            <div class="stat-card">
+                <span class="icon">📝</span>
+                <span class="number">99%</span>
+                <p class="label">Satisfação dos Membros</p>
             </div>
 
-            <div class="card">
-                <div class="icon-box">
-                    <img src="img/fluent_brain-20-filled.svg" alt="Ícone Curiosidade">
-                </div>
-                <h3>Curiosidade</h3>
-                <p>Propósito de resolver problemas.</p>
+            <div class="stat-card">
+                <span class="icon">🏆</span>
+                <span class="number">7+</span>
+                <p class="label">Competições Participadas</p>
+            </div>
+
+            <div class="stat-card">
+                <span class="icon">🤝</span>
+                <span class="number">10+</span>
+                <p class="label">Atuação em Projetos de Extensão</p>
             </div>
         </div>
-    </section>
-    <link rel="stylesheet" href="assets/css/about.css">
 
-    
-    <section class="sobre">
-
-        <!-- <div>
-            <img src="assets/amico.svg" alt="Ilustração de programadores" class="imagem">
-        </div>
-        <h1 class="titulo-about">About Us</h1>
-        <div class="texto-sobre">
-            <h2 class="subtitulo-about">for_code: Programação na Engenharia Química</h2>
-            <p class="texto-about">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-            <button class="botao-about">Mais sobre</button>
-        </div> -->
-
-        <div class="ẗitulo-sobre">
-            <h1 class="titulo-about">About Us</h1>
-        </div>
-
-        <div class="content-sobre">
-            <img src="assets/amico.svg" alt="Ilustração de programadores" class="imagem">
-            <div class="texto-sobre">
-                <h2 class="subtitulo-about">for_code: Programação na Engenharia Química</h2>
-                <p class="texto-about">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-                <button class="botao-about">Mais sobre</button> 
-            </div>
+        <div class="visual-container">
+            <img src="bbb.png" alt="Dashboard Statistics" class="mockup-image">
         </div>
     </section>
 
-    <main><!--Não sei exatamente onde começa a main--> 
-
-    <!--Diretorias-->
-        <section class="diretoria">
-            <div class="container">
-                <h1>Diretorias</h1>
-                <div class="diretoria-grid">
-
-                    <!--Diretoria1-->
-                    <div class="diretoria-card">
-                        <img src="assets/diretoria/diretor1.png" alt="Behael">
-                        <div class="diretoria-info">
-                            <h2 class="diretoria-diretor">Behael</h2>
-                            <p class="diretoria-nome">Diretoria de Marketing</p>
-                        </div>
-                    </div>   
-
-                    <!--Diretoria2-->
-                    <div class="diretoria-card">
-                        <img src="assets/diretoria/diretor2.png" alt="Behael">
-                        <div class="diretoria-info">
-                            <h2 class="diretoria-diretor">Behael</h2>
-                            <p class="diretoria-nome">Diretoria de Marketing</p>
-                        </div>
-                    </div>  
-
-                    <!--Diretoria3-->
-                    <div class="diretoria-card">
-                        <img src="assets/diretoria/diretor3.png" alt="Behael">
-                        <div class="diretoria-info">
-                            <h2 class="diretoria-diretor">Behael</h2>
-                            <p class="diretoria-nome">Diretoria de Marketing</p>
-                        </div>
-                    </div>  
-
-                    <!--Diretoria4-->
-                    <div class="diretoria-card">
-                        <img src="assets/diretoria/diretor4.png" alt="Behael">
-                        <div class="diretoria-info">
-                            <h2 class="diretoria-diretor">Behael</h2>
-                            <p class="diretoria-nome">Diretoria de Marketing</p>
-                        </div>
-                    </div>  
-                </div>
-            </div>
-        </section><!--Fim Diretoria-->
-    
-
-
-    <div class="form-container">
-      <h2>Envie-nos uma mensagem</h2>
-      <p class="subtitle">Preencha os dados para iniciarmos o contato.</p>
-
-      <form id="contactForm">
-        <div class="input-group">
-          <input type="text" id="name" placeholder="Nome" required />
-          <input type="email" id="email" placeholder="E-mail" required />
-        </div>
-
-        <div class="input-group">
-          <input type="tel" id="phone" placeholder="Telefone (DD) 00000-0000" />
-          <input type="text" id="company" placeholder="Empresa" />
-        </div>
-
-        <div class="field-wrapper">
-          <input type="text" id="subject" placeholder="Subject" required />
-        </div>
-
-        <div class="field-wrapper">
-          <textarea
-            id="message"
-            placeholder="Escreva sua mensagem aqui..."
-            required
-          ></textarea>
-        </div>
-
-        <button type="submit" class="send-btn">Enviar Mensagem</button>
-      </form>
-
-    </main><!--Finda da main-->
-    
-    <footer>
-        <div id="footer_content">
-            <div id="footer_contacts">
-                <div id="footer_title">
-                <h1>for_code</h1>
-                <img src="assets/for_code_logo.png" alt="Logo for_code" id="footer_logo">
-                </div>
-                <div id="footer_subtitle">
-                    <p>Nossas redes sociais:</p>
-                </div>
-                <div id="footer_social_media">
-                    <a href="https://www.instagram.com/forcodeufrj/" target="_blank" class="footer-link" id="instagram">
-                        <i class="fa-brands fa-instagram"></i>
-                    </a>
-
-                    <a href="https://github.com/forcodeufrj" target="_blank" class="footer-link" id="github">
-                        <i class="fa-brands fa-github"></i>
-                    </a>
-
-                    <a href="https://www.linkedin.com/company/for-code" target="_blank" class="footer-link" id="linkedin">
-                        <i class="fa-brands fa-linkedin"></i>
-                    </a>
-                    <a href="https://www.youtube.com/@for_code" target="_blank" class="footer-link" id="youtube">
-                        <i class="fa-brands fa-youtube"></i>
-                    </a>
-                </div>
-            </div>
-
-            <ul class="footer-list">
-                <li>
-                    <h3>Links úteis</h3>
-                </li>
-                <li>
-                    <a href="#" class="footer-link">Equipe</a>
-                </li>
-                <li>
-                    <a href="#" class="footer-link">Eventos</a>
-                </li>
-                <li>
-                    <a href="#" class="footer-link">Conquistas</a>
-                </li>
-            </ul>
-                        <ul class="footer-contact-list">
-                <li>
-                    <h3>Contato</h3>
-                </li>
-                <li>
-                    <a href="#" class="footer-link">Diretores</a>
-                </li>
-                <li>
-                    <a href="#" class="footer-link">Nos contate</a>
-                </li>
-                <li>
-                    <a href="#" class="footer-link">Feedback</a>
-                </li>
-            </ul>
-
-            <div id="footer_subscribe">
-                <h3>Fique por dentro!</h3>
-
-                <p>
-                    Insira seu e-mail para
-                    receber nossas novidades.
-                </p>
-
-                <div id="input_group">
-                    <input type="email" id="email">
-                    <button>
-                        <i class="fa-regular fa-envelope"></i>
-                    </button>
-                </div>
-            </div>
-        </div>
-        <div id="footer_bottom">
-            <p>&copy; 2026 for_code. Todos os direitos reservados.</p>
-            </div>
-    </footer>
 </body>
 </html>
