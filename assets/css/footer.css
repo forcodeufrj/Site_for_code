@@ -74,7 +74,7 @@ footer {
 }
 
 #github {
-    background-color: #171515;
+    background-color: #000000;
 }
 
 #linkedin {
@@ -153,7 +153,7 @@ footer {
     border: none;
     color: var(--color-text-e-icon);
     padding: 0px 1.25rem;
-    font-size: 1.125rem;
+    font-size: 1.5rem;
     height: 100%;
     border-radius: 0px 4px 4px 0px;
     cursor: pointer;
