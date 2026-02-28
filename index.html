@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -12,7 +13,8 @@
         body {
             margin: 0;
             padding: 0;
-            background-color: #0d0b1f; /* Fundo escuro profundo */
+            background-color: #0d0b1f;
+            /* Fundo escuro profundo */
             font-family: 'Inter', sans-serif;
             color: white;
             display: flex;
@@ -53,8 +55,10 @@
 
         .stat-card {
             background: rgba(255, 255, 255, 0.03);
-            backdrop-filter: blur(10px); /* Efeito de vidro */
-            border: 1.5px solid rgba(138, 43, 226, 0.3); /* Borda roxa translúcida */
+            backdrop-filter: blur(10px);
+            /* Efeito de vidro */
+            border: 1.5px solid rgba(138, 43, 226, 0.3);
+            /* Borda roxa translúcida */
             border-radius: 24px;
             padding: 40px 30px;
             text-align: center;
@@ -107,7 +111,8 @@
             /* Filtro para combinar com a estética neon se a imagem for clara */
             filter: drop-shadow(0 0 20px rgba(138, 43, 226, 0.2));
             margin-top: 120px;
-            margin-left: auto;   /* Empurra a imagem o máximo possível para a direita */
+            margin-left: auto;
+            /* Empurra a imagem o máximo possível para a direita */
             margin-right: 60px;
         }
 
@@ -118,6 +123,7 @@
                 text-align: center;
                 padding-top: 100px;
             }
+
             .bg-text {
                 font-size: 4rem;
                 top: 50px;
@@ -127,9 +133,12 @@
         }
     </style>
 </head>
+
 <body>
 
-    <section class="diretoria">
+    <main>
+        <!--Diretorias-->
+        <section class="diretoria">
             <div class="container">
                 <h1>Diretorias</h1>
 
@@ -142,7 +151,7 @@
                             <h2 class="diretoria-diretor">Behael</h2>
                             <p class="diretoria-nome">Diretoria de Marketing</p>
                         </div>
-                    </div>   
+                    </div>
 
                     <!--Diretoria2-->
                     <div class="diretoria-card">
@@ -151,7 +160,7 @@
                             <h2 class="diretoria-diretor">Behael</h2>
                             <p class="diretoria-nome">Diretoria de Marketing</p>
                         </div>
-                    </div>  
+                    </div>
 
                     <!--Diretoria3-->
                     <div class="diretoria-card">
@@ -160,7 +169,7 @@
                             <h2 class="diretoria-diretor">Behael</h2>
                             <p class="diretoria-nome">Diretoria de Marketing</p>
                         </div>
-                    </div>  
+                    </div>
 
                     <!--Diretoria4-->
                     <div class="diretoria-card">
@@ -169,7 +178,7 @@
                             <h2 class="diretoria-diretor">Behael</h2>
                             <p class="diretoria-nome">Diretoria de Marketing</p>
                         </div>
-                    </div>  
+                    </div>
 
                 </div>
 
@@ -177,39 +186,41 @@
 
         </section>
 
-    <div class="bg-text">Statistics</div>
+        <div class="bg-text">Statistics</div>
 
-    <section class="stats-section">
-        <div class="stats-grid">
-            <div class="stat-card">
-                <span class="icon">🙋🏽‍♂️</span>
-                <span class="number">25+</span>
-                <p class="label">Membros Ativoss</p>
+        <section class="stats-section">
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <span class="icon">🙋🏽‍♂️</span>
+                    <span class="number">25+</span>
+                    <p class="label">Membros Ativoss</p>
+                </div>
+
+                <div class="stat-card">
+                    <span class="icon">📝</span>
+                    <span class="number">99%</span>
+                    <p class="label">Satisfação dos Membros</p>
+                </div>
+
+                <div class="stat-card">
+                    <span class="icon">🏆</span>
+                    <span class="number">7+</span>
+                    <p class="label">Competições Participadas</p>
+                </div>
+
+                <div class="stat-card">
+                    <span class="icon">🤝</span>
+                    <span class="number">10+</span>
+                    <p class="label">Atuação em Projetos de Extensão</p>
+                </div>
             </div>
 
-            <div class="stat-card">
-                <span class="icon">📝</span>
-                <span class="number">99%</span>
-                <p class="label">Satisfação dos Membros</p>
+            <div class="visual-container">
+                <img src="bbb.png" alt="Dashboard Statistics" class="mockup-image">
             </div>
-
-            <div class="stat-card">
-                <span class="icon">🏆</span>
-                <span class="number">7+</span>
-                <p class="label">Competições Participadas</p>
-            </div>
-
-            <div class="stat-card">
-                <span class="icon">🤝</span>
-                <span class="number">10+</span>
-                <p class="label">Atuação em Projetos de Extensão</p>
-            </div>
-        </div>
-
-        <div class="visual-container">
-            <img src="bbb.png" alt="Dashboard Statistics" class="mockup-image">
-        </div>
-    </section>
+        </section>
+    </main>
 
 </body>
+
 </html>
