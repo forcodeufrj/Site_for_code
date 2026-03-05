@@ -2,6 +2,7 @@
    v2.0 | 20110126
    License: none (public domain)
 */
+@import url('https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@500&display=swap');
 
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
@@ -23,7 +24,7 @@ time, mark, audio, video {
 	font: inherit;
 	vertical-align: baseline;
 }
-/* HTML5 display-role reset for older browsers */
+
 article, aside, details, figcaption, figure, 
 footer, header, hgroup, menu, nav, section {
 	display: block;
@@ -45,4 +46,67 @@ q:before, q:after {
 table {
 	border-collapse: collapse;
 	border-spacing: 0;
+}
+
+
+
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    background-color: #614AD3;
+}
+
+li, a, button{
+    font-family: 'Lexend Deca', sans-serif;
+    font-weight: 500;
+    font-size: 18px;
+    color: #fff;
+    text-decoration: none;
+}
+
+header{
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding: 30px 10%;
+}
+
+.logo{
+	cursor: pointer;
+	margin-right: auto;
+}
+
+.nav__links {
+	list-style: none;
+}
+
+.nav__links li {
+	display: inline-block;
+	padding: 0px 20px;
+}
+
+.nav__links li a {
+	transition: all 0.3s ease 0s;
+	color: #fff;
+}
+
+.nav__links li a:hover {
+	transition: all 0.3s ease 0s;
+	color: #d358e4;
+}
+
+button{
+	margin-left: 30px;
+	padding: 9px 25px;
+	background-color: rgba(97, 74, 111, 1);
+	border: none;
+	border-radius: 50px;
+	cursor: pointer;
+	transition: all 0.3s ease 0s;
+}
+
+button:hover{
+	background-color: rgba(97, 74, 111, 0.8);
 }
