@@ -49,14 +49,14 @@ header{
 button{
 	margin-left: 30px;
 	padding: 9px 25px;
-	background: #A210C2;
+	background: #614AD3;
 	background: linear-gradient(90deg, rgba(162, 16, 194, 1) 0%, rgba(97, 74, 211, 1) 50%, rgba(148, 131, 228, 1) 100%);
-	border: none;
 	border-radius: 50px;
 	cursor: pointer;
-	transition: all 0.3s ease 0s;
 }
 
 button:hover{
-	background-color: rgba(97, 74, 211, 0.8);
+	background: #614AD3;
+	background: linear-gradient(90deg, rgba(162, 16, 194, 0.5) 0%, rgba(97, 74, 211, 0.5) 50%, rgba(148, 131, 228, 0.5) 100%);
+	transition: all 0.3s ease 0s;
 }
